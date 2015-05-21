@@ -18,7 +18,6 @@ import com.xiaoy.service.SurveyService;
 @Service("surveyService")
 public class SurveyServiceImpl extends BasicServiceImpl<Survey> implements SurveyService
 {
-
 	private SurveyDao surveyDao;
 
 	@Override
