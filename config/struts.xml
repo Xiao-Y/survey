@@ -3,20 +3,34 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
 	"http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-     
+
 	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
 	<!-- 更改Struts的开发模式 -->
 	<constant name="struts.devMode" value="true" />
 	<!-- 配置Struts的简单模式 -->
-	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.ui.theme" value="simple" />
 	<!-- 指定允许上传的文件最大字节数。默认值是2097152(2M) -->
-    <constant name="struts.multipart.maxSize" value="10701096"/>
-    <!-- 当struts的配置文件修改后,系统是否自动重新加载该文件,默认值为false(生产环境下使用),开发阶段最好打开 -->
-    <constant name="struts.configuration.xml.reload" value="true" />
-    <!-- 设置浏览器是否缓存静态内容,默认值为true(生产环境下使用),开发阶段最好关闭 -->
-    <constant name="struts.serve.static.browserCache" value="false" />
-    
-	<package name="menu" namespace="/" extends="struts-default">
-		<action name=""></action>
+	<constant name="struts.multipart.maxSize" value="10701096" />
+	<!-- 当struts的配置文件修改后,系统是否自动重新加载该文件,默认值为false(生产环境下使用),开发阶段最好打开 -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<!-- 设置浏览器是否缓存静态内容,默认值为true(生产环境下使用),开发阶段最好关闭 -->
+	<constant name="struts.serve.static.browserCache" value="false" />
+
+	<package name="surveyPage" namespace="/" extends="struts-default">
+		<!-- 注册 -->
+		<action name="RegAction_*" class="regAction" method="{1}">
+			<!-- 用于显示错误信息 -->
+			<result name="input">/reg.jsp</result>
+			<result name="regPage">/reg.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<!-- 登陆 -->
+		<action name="LoginAction_*" class="loginAction" method="{1}">
+			<!-- 用于显示错误信息 -->
+			<result name="input">/index.jsp</result>
+			<result name="loginPage">/index.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
 	</package>
 </struts>    

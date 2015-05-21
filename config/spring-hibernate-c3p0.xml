@@ -13,7 +13,13 @@
 
 	<!-- 配置自动扫描 -->
 	<context:component-scan
-		base-package="com.xiaoy.dao.impl,com.xiaoy.service.impl,com.xiaoy.basic.dao.impl,com.xiaoy.basic.service.impl" />
+		base-package="
+		com.xiaoy.dao.impl,
+		com.xiaoy.service.impl,
+		com.xiaoy.basic.dao.impl,
+		com.xiaoy.basic.service.impl,
+		com.xiaoy.action.web
+		" />
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 
