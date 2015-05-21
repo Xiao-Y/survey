@@ -18,17 +18,16 @@ import com.xiaoy.util.ValiDateUtil;
 @Service("userService")
 public class UserServiceImpl extends BasicServiceImpl<User> implements UserService
 {
+	private UserDao userDao;
 
 	@Override
 	@Resource(name = "userDao")
 	public void setBasicDao(BasicDao<User> basicDao)
 	{
-		super.setBasicDao(basicDao);
+		super.basicDao = basicDao;
+		this.userDao = (UserDao) basicDao;
 	}
-
-	@Resource
-	private UserDao userDao;
-
+	
 	@Override
 	public boolean isValidEmailRepeat(String email)
 	{

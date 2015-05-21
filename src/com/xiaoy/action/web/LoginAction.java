@@ -1,10 +1,7 @@
 package com.xiaoy.action.web;
 
-import java.util.Map;
-
 import javax.annotation.Resource;
 
-import org.apache.struts2.interceptor.SessionAware;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
@@ -16,18 +13,9 @@ import com.xiaoy.service.UserService;
 @SuppressWarnings("serial")
 @Controller
 @Scope("prototype")
-public class LoginAction extends BasicAction<UserForm> implements SessionAware
+public class LoginAction extends BasicAction<UserForm>
 {
 	private UserForm model = super.getModel();
-
-	// 接收session的map
-	private Map<String, Object> sessionMap;
-
-	@Override
-	public void setSession(Map<String, Object> arg0)
-	{
-		this.sessionMap = arg0;
-	}
 
 	@Resource
 	private UserService userService;

@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
-
 import com.xiaoy.basic.dao.BasicDao;
 import com.xiaoy.basic.service.BasicService;
 
@@ -17,22 +15,13 @@ import com.xiaoy.basic.service.BasicService;
  * @author XiaoY
  * @date: 2015年5月17日 下午3:44:52
  */
-public class BasicServiceImpl<T> implements BasicService<T>
+public abstract class BasicServiceImpl<T> implements BasicService<T>
 {
 
-	private BasicDao<T> basicDao;
+	protected BasicDao<T> basicDao;
 
-	/**
-	 * 基础dao，所以具体类要重写此方法
-	 * 
-	 * @param basicDao
-	 */
-	@Resource
-	public void setBasicDao(BasicDao<T> basicDao)
-	{
-		this.basicDao = basicDao;
-	}
-
+	public abstract void setBasicDao(BasicDao<T> basicDao);
+	
 	@Override
 	public void saveEntity(T t)
 	{

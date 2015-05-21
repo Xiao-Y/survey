@@ -17,7 +17,6 @@
 		com.xiaoy.dao.impl,
 		com.xiaoy.service.impl,
 		com.xiaoy.basic.dao.impl,
-		com.xiaoy.basic.service.impl,
 		com.xiaoy.action.web
 		" />
 

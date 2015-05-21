@@ -32,5 +32,14 @@
 			<result name="loginPage">/index.jsp</result>
 			<result name="success">/index.jsp</result>
 		</action>
+		
+		<!-- 我的调查列表 -->
+		<action name="SurveyAction_*" class="surveyAction" method="{1}">
+			<!-- 用于显示错误信息 -->
+			<result name="input">/index.jsp</result>
+			
+			<result name="mySurveysListPage">/mySurveyList.jsp</result>
+			<result name="designSurvey">/designSurvey.jsp</result>
+		</action>
 	</package>
 </struts>    
