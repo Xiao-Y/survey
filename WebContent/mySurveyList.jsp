@@ -16,7 +16,7 @@
 	</head>
 	<body>
 		<s:include value="/header.jsp" />
-		<s:if test="mySurveys != null || mySurveys.size() > 0 ">
+		<s:if test="mySurveyList != null && mySurveyList.size() > 0 ">
 			<table>
 				<tr>
 					<td colspan="10" style="height: 5px"></td>

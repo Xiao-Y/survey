@@ -4,10 +4,8 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
-import com.xiaoy.action.form.UserForm;
 import com.xiaoy.basic.dao.BasicDao;
 import com.xiaoy.basic.service.impl.BasicServiceImpl;
 import com.xiaoy.dao.UserDao;
@@ -41,15 +39,14 @@ public class UserServiceImpl extends BasicServiceImpl<User> implements UserServi
 	}
 
 	@Override
-	public User validLogin(UserForm model)
+	public User validLogin(User model)
 	{
 		User user = null;
 		List<User> list = userDao.validLogin(model);
 
 		if (list != null && list.size() > 0)
 		{
-			user = new User();
-			BeanUtils.copyProperties(list.get(0), user);
+			user = list.get(0);
 		}
 		return user;
 	}

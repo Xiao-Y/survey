@@ -24,7 +24,7 @@ public abstract class BasicAction<T> extends ActionSupport implements ModelDrive
 {
 	private static final long serialVersionUID = -8699431871497570065L;
 
-	private T model;
+	public T model;
 
 	@SuppressWarnings("unchecked")
 	public BasicAction()

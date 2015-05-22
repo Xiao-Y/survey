@@ -24,5 +24,4 @@ public interface SurveyService extends BasicService<Survey>
 	 * @return
 	 */
 	Survey newSurvey(User user);
-
 }

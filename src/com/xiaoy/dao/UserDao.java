@@ -2,7 +2,6 @@ package com.xiaoy.dao;
 
 import java.util.List;
 
-import com.xiaoy.action.form.UserForm;
 import com.xiaoy.basic.dao.BasicDao;
 import com.xiaoy.entities.User;
 
@@ -23,6 +22,6 @@ public interface UserDao extends BasicDao<User>
 	 * @param model
 	 * @return
 	 */
-	List<User> validLogin(UserForm model);
+	List<User> validLogin(User model);
 
 }

@@ -17,6 +17,30 @@
 	<constant name="struts.serve.static.browserCache" value="false" />
 
 	<package name="surveyPage" namespace="/" extends="struts-default">
+	
+		<!-- 自定义拦截器栈 -->
+		<interceptors>
+			<!-- 注册登陆拦截器 -->
+			<interceptor name="loginInterceptor"
+				class="com.xiaoy.interceptor.LoginInterceptor" />
+			<!-- 定义拦截器桡 -->
+			<interceptor-stack name="surveyStack">
+				<interceptor-ref name="loginInterceptor" />
+				<interceptor-ref name="defaultStack">
+					<!-- 修改ModelDrivenInterceptor中的refreshModelBeforeResult为true，表示刷新模型 -->
+					<param name="modelDriven.refreshModelBeforeResult">true</param>
+				</interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<!-- 设置默认拦截器栈 -->
+		<default-interceptor-ref name="surveyStack" />
+		
+		<!-- 定义全局结果 -->
+		<global-results>
+			<result name="login">/index.jsp</result>
+		</global-results>
+
 		<!-- 注册 -->
 		<action name="RegAction_*" class="regAction" method="{1}">
 			<!-- 用于显示错误信息 -->
@@ -32,12 +56,12 @@
 			<result name="loginPage">/index.jsp</result>
 			<result name="success">/index.jsp</result>
 		</action>
-		
+
 		<!-- 我的调查列表 -->
 		<action name="SurveyAction_*" class="surveyAction" method="{1}">
 			<!-- 用于显示错误信息 -->
 			<result name="input">/index.jsp</result>
-			
+
 			<result name="mySurveysListPage">/mySurveyList.jsp</result>
 			<result name="designSurvey">/designSurvey.jsp</result>
 		</action>

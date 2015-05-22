@@ -1,6 +1,5 @@
 package com.xiaoy.service;
 
-import com.xiaoy.action.form.UserForm;
 import com.xiaoy.basic.service.BasicService;
 import com.xiaoy.entities.User;
 
@@ -23,6 +22,6 @@ public interface UserService extends BasicService<User>
 	 * @param model
 	 * @return
 	 */
-	User validLogin(UserForm model);
+	User validLogin(User model);
 
 }

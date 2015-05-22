@@ -5,7 +5,6 @@ import javax.annotation.Resource;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import com.xiaoy.action.form.UserForm;
 import com.xiaoy.basic.action.BasicAction;
 import com.xiaoy.entities.User;
 import com.xiaoy.service.UserService;
@@ -13,9 +12,9 @@ import com.xiaoy.service.UserService;
 @SuppressWarnings("serial")
 @Controller
 @Scope("prototype")
-public class LoginAction extends BasicAction<UserForm>
+public class LoginAction extends BasicAction<User>
 {
-	private UserForm model = super.getModel();
+	private User model = super.getModel();
 
 	@Resource
 	private UserService userService;

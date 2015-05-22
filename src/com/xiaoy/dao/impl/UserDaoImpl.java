@@ -6,7 +6,6 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.xiaoy.action.form.UserForm;
 import com.xiaoy.basic.dao.impl.BasicDaoImpl;
 import com.xiaoy.dao.UserDao;
 import com.xiaoy.entities.User;
@@ -27,7 +26,7 @@ public class UserDaoImpl extends BasicDaoImpl<User> implements UserDao
 	}
 
 	@Override
-	public List<User> validLogin(UserForm model)
+	public List<User> validLogin(User model)
 	{
 		String hql = "from User u where u.email = :email and u.password = :password";
 		Map<String, Object> param = new HashMap<>();
