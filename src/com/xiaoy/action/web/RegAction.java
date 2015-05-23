@@ -13,11 +13,12 @@ import com.xiaoy.service.UserService;
 import com.xiaoy.util.DataHelp;
 import com.xiaoy.util.ValiDateUtil;
 
-@SuppressWarnings("serial")
 @Controller
 @Scope("prototype")
 public class RegAction extends BasicAction<User>
 {
+	private static final long serialVersionUID = -9122967087370573953L;
+
 	private User model = super.getModel();
 
 	private String confirmPassword;

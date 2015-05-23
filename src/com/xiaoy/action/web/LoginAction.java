@@ -9,11 +9,12 @@ import com.xiaoy.basic.action.BasicAction;
 import com.xiaoy.entities.User;
 import com.xiaoy.service.UserService;
 
-@SuppressWarnings("serial")
 @Controller
 @Scope("prototype")
 public class LoginAction extends BasicAction<User>
 {
+	private static final long serialVersionUID = -8733425298891227372L;
+
 	private User model = super.getModel();
 
 	@Resource

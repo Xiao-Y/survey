@@ -37,7 +37,7 @@
 					</td>
 					<td class="tdSHeaderR">
 						<s:a namespace="/" action="SurveyAction_toAddLogoPage?sid=%{#sId}">增加Logo</s:a>&nbsp;
-						<s:a action="SurveyAction_editSurvey?sid=%{#sId}" namespace="/">编辑调查</s:a>&nbsp;
+						<s:a action="SurveyAction_toEditSurvey?sid=%{#sId}" namespace="/">编辑调查</s:a>&nbsp;
 						<s:a namespace="/" action="PageAction_toAddPage?sid=%{#sId}">增加页</s:a>&nbsp;
 					</td>
 				</tr>
@@ -58,7 +58,7 @@
 														<!-- 页面标题 -->
 														<td class="tdPHeaderL"><s:property value="#p.title" /></td>
 														<td class="tdPHeaderR">
-															<s:a namespace="/" action="PageAction_editPage?sid=%{#sId}&pid=%{#pId}">编辑页标题</s:a>&nbsp;
+															<s:a namespace="/" action="PageAction_toEditPage?sid=%{#sId}&pid=%{#pId}">编辑页标题</s:a>&nbsp;
 															<s:a namespace="/" action="MoveOrCopyPageAction_toSelectTargetPage?srcPid=%{#pId}">移动/复制页</s:a>&nbsp;
 															<s:a namespace="/" action="QuestionAction_toSelectQuestionType?sid=%{#sId}&pid=%{#pId}">增加问题</s:a>&nbsp;
 															<s:a namespace="/" action="PageAction_deletePage?sid=%{#sId}&pid=%{#pId}">删除页</s:a>&nbsp;

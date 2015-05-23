@@ -14,11 +14,12 @@ import com.xiaoy.entities.User;
 import com.xiaoy.service.SurveyService;
 import com.xiaoy.struts2.UserAware;
 
-@SuppressWarnings("serial")
 @Controller
 @Scope("prototype")
 public class SurveyAction extends BasicAction<Survey> implements UserAware
 {
+	private static final long serialVersionUID = -7000719030490941650L;
+
 	/**
 	 * 接收用户对象
 	 */
@@ -81,6 +82,28 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 		return "designSurvey";
 	}
 
+	/**
+	 * 进入编辑页面
+	 * @return
+	 */
+	public String toEditSurvey()
+	{
+		this.model = surveyService.getEntity(sid);
+		return "editSurveyPage";
+	}
+	
+	/**
+	 * 保存调查信息
+	 * @return
+	 */
+	public String updateSurvey()
+	{
+		this.sid = model.getId();
+		model.setUser(this.user);
+		surveyService.updateEntity(model);
+		return "designSurveyAction";
+	}
+	
 	/************************ getter and setter ***************************/
 
 	public void setMySurveyList(List<Survey> mySurveyList)

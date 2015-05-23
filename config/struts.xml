@@ -5,8 +5,8 @@
 <struts>
 
 	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
-	<!-- 更改Struts的开发模式 -->
-	<constant name="struts.devMode" value="true" />
+	<!-- 更改Struts的开发模式 true为打开、false为关闭 -->
+	<constant name="struts.devMode" value="false" />
 	<!-- 配置Struts的简单模式 -->
 	<constant name="struts.ui.theme" value="simple" />
 	<!-- 指定允许上传的文件最大字节数。默认值是2097152(2M) -->
@@ -17,7 +17,7 @@
 	<constant name="struts.serve.static.browserCache" value="false" />
 
 	<package name="surveyPage" namespace="/" extends="struts-default">
-	
+
 		<!-- 自定义拦截器栈 -->
 		<interceptors>
 			<!-- 注册登陆拦截器 -->
@@ -35,10 +35,16 @@
 
 		<!-- 设置默认拦截器栈 -->
 		<default-interceptor-ref name="surveyStack" />
-		
+
 		<!-- 定义全局结果 -->
 		<global-results>
 			<result name="login">/index.jsp</result>
+
+			<result name="designSurveyAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">SurveyAction_designSurvey</param>
+				<param name="sid">${sid}</param>
+			</result>
 		</global-results>
 
 		<!-- 注册 -->
@@ -57,13 +63,20 @@
 			<result name="success">/index.jsp</result>
 		</action>
 
-		<!-- 我的调查列表 -->
+		<!-- 调查操作 -->
 		<action name="SurveyAction_*" class="surveyAction" method="{1}">
 			<!-- 用于显示错误信息 -->
 			<result name="input">/index.jsp</result>
 
 			<result name="mySurveysListPage">/mySurveyList.jsp</result>
 			<result name="designSurvey">/designSurvey.jsp</result>
+			<result name="editSurveyPage">/editSurvey.jsp</result>
+		</action>
+
+		<!-- 页面操作 -->
+		<action name="PageAction_*" class="pageAction" method="{1}">
+			<result name="addPagePage">/editPage.jsp</result>
+			<result name="editPagePage">/editPage.jsp</result>
 		</action>
 	</package>
 </struts>    
