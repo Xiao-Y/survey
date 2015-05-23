@@ -57,9 +57,7 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 	 */
 	public String newSurvey()
 	{
-		Survey survey = surveyService.newSurvey(user);
-		BeanUtils.copyProperties(survey, model);
-
+		this.model = surveyService.newSurvey(user);
 		return "designSurvey";
 	}
 
