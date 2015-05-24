@@ -84,7 +84,7 @@
 																				<!-- 问题题干 -->
 																				<td class="tdQHeaderL"><s:property value="#q.title" /></td>
 																				<td class="tdQHeaderR">
-																					<s:a namespace="/" action="QuestionAction_editQuestion?sid=%{#sId}&pid=%{pId}&qid=%{#qId}">编辑问题</s:a>&nbsp;
+																					<s:a namespace="/" action="QuestionAction_toEditQuestionPage?sid=%{#sId}&pid=%{pId}&qid=%{#qId}">编辑问题</s:a>&nbsp;
 																					<s:a namespace="/" action="QuestionAction_deleteQuestion?sid=%{#sId}&qid=%{#qId}">删除问题</s:a>&nbsp;
 																				</td>
 																			</tr>

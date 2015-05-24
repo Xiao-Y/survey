@@ -58,6 +58,16 @@ public class PageAction extends BasicAction<Page>
 
 		return "designSurveyAction";
 	}
+	
+	/**
+	 * 删除当着页面
+	 * @return
+	 */
+	public String deletePage()
+	{
+		pageService.delecteEntity(pageService.getEntity(pid));
+		return "designSurveyAction";
+	}
 
 	/********************** getter and setter **********************************************/
 	public Integer getSid()

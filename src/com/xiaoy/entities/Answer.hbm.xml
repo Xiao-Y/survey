@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-5-24 13:34:37 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.xiaoy.entities">
+	<class name="Answer" table="T_ANSWER">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="answerIds" type="java.lang.String">
+			<column name="ANSWER_IDS" />
+		</property>
+		<property name="otherAnswer" type="java.lang.String">
+			<column name="OTHER_ANSWER" />
+		</property>
+		<property name="uuid" type="java.lang.String">
+			<column name="UUID" />
+		</property>
+		<property name="answerTime" type="java.util.Date">
+			<column name="ANSWER_TIME" />
+		</property>
+
+		<many-to-one name="question" class="Question" column="QUESTION_ID"
+			fetch="join" />
+		<many-to-one name="survey" class="Survey" column="SURVEY_ID"
+			fetch="join" />
+	</class>
+</hibernate-mapping>

@@ -38,5 +38,11 @@
 		
 		<many-to-one name="page" class="Page" column="PAGE_ID" fetch="join"/>
 		
+		<set name="answers" inverse="true" lazy="true" order-by="id" cascade="delete">
+			<key>
+				<column name="QUESTION_ID" />
+			</key>
+			<one-to-many class="Answer" />
+		</set>
 	</class>
 </hibernate-mapping>

@@ -90,6 +90,24 @@ public class BasicDaoImpl<T> implements BasicDao<T>
 		}
 	}
 
+	@Override
+	public void batchEntityByHQL(String hql, Object... param)
+	{
+		if (!StringUtils.isEmpty(hql))
+		{
+			Query query = this.getSession().createQuery(hql);
+
+			if (param != null && param.length > 0)
+			{
+				for (int i = 0; i < param.length; i++)
+				{
+					query.setParameter(i, param[i]);
+				}
+			}
+			query.executeUpdate();
+		}
+	}
+
 	@SuppressWarnings("unchecked")
 	@Override
 	public T loadEntity(Serializable id)
@@ -117,6 +135,26 @@ public class BasicDaoImpl<T> implements BasicDao<T>
 				for (Map.Entry<String, Object> entry : param.entrySet())
 				{
 					query.setParameter(entry.getKey(), entry.getValue());
+				}
+			}
+			return query.list();
+		}
+		return null;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<T> findEntityByHQL(String hql, Object... param)
+	{
+		if (!StringUtils.isEmpty(hql))
+		{
+			Query query = this.getSession().createQuery(hql);
+
+			if (param != null && param.length > 0)
+			{
+				for (int i = 0; i < param.length; i++)
+				{
+					query.setParameter(i, param[i]);
 				}
 			}
 			return query.list();

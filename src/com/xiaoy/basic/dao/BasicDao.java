@@ -48,9 +48,18 @@ public interface BasicDao<T>
 	 * @param hql
 	 *            语句
 	 * @param param
-	 *            参数
+	 *            Map参数
 	 */
 	public void batchEntityByHQL(String hql, Map<String, Object> param);
+
+	/**
+	 * 批量操作
+	 * 
+	 * @param hql
+	 * @param param
+	 *            不定参数
+	 */
+	public void batchEntityByHQL(String hql, Object... param);
 
 	/**
 	 * 通过主键查询出一个对象
@@ -78,4 +87,14 @@ public interface BasicDao<T>
 	 * @return List&ltT&gt
 	 */
 	public List<T> findEntityByHQL(String hql, Map<String, Object> param);
+
+	/**
+	 * 通过一个HQL语句查询出一个集合
+	 * 
+	 * @param hql语句
+	 * @param param
+	 *            不定参数
+	 * @return List&ltT&gt
+	 */
+	public List<T> findEntityByHQL(String hql, Object... param);
 }

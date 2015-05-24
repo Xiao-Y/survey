@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
@@ -61,13 +60,13 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 		return "designSurvey";
 	}
 
-//	/**
-//	 * 预处理拦截器：该方法只在designSurvey方法之前调用
-//	 */
-//	public void prepareDesignSurvey()
-//	{
-//		this.model = surveyService.getEntity(sid);
-//	}
+	// /**
+	// * 预处理拦截器：该方法只在designSurvey方法之前调用
+	// */
+	// public void prepareDesignSurvey()
+	// {
+	// this.model = surveyService.getEntity(sid);
+	// }
 
 	/**
 	 * 设计设想
@@ -82,6 +81,7 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 
 	/**
 	 * 进入编辑页面
+	 * 
 	 * @return
 	 */
 	public String toEditSurvey()
@@ -89,9 +89,10 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 		this.model = surveyService.getEntity(sid);
 		return "editSurveyPage";
 	}
-	
+
 	/**
 	 * 保存调查信息
+	 * 
 	 * @return
 	 */
 	public String updateSurvey()
@@ -101,7 +102,18 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 		surveyService.updateEntity(model);
 		return "designSurveyAction";
 	}
-	
+
+	/**
+	 * 删除调查
+	 * 
+	 * @return
+	 */
+	public String deleteSurvey()
+	{
+		surveyService.delecteEntity(surveyService.getEntity(sid));
+		return "mySurveysListPageAction";
+	}
+
 	/************************ getter and setter ***************************/
 
 	public void setMySurveyList(List<Survey> mySurveyList)

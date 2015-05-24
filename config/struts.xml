@@ -71,6 +71,11 @@
 			<result name="mySurveysListPage">/mySurveyList.jsp</result>
 			<result name="designSurvey">/designSurvey.jsp</result>
 			<result name="editSurveyPage">/editSurvey.jsp</result>
+			
+			<result name="mySurveysListPageAction" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">SurveyAction_mySurveysListPage</param>
+			</result>
 		</action>
 
 		<!-- 页面操作 -->

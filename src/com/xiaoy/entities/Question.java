@@ -1,5 +1,8 @@
 package com.xiaoy.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import com.xiaoy.util.StringUtil;
 
 /**
@@ -48,6 +51,8 @@ public class Question
 
 	// 建立从Question到Page之间多对一关联关系
 	private Page page;
+	
+	private Set<Answer> answers = new HashSet<>();
 
 	public Integer getId()
 	{
@@ -216,5 +221,15 @@ public class Question
 	public void setOptionArr(String[] optionArr)
 	{
 		this.optionArr = optionArr;
+	}
+
+	public Set<Answer> getAnswers()
+	{
+		return answers;
+	}
+
+	public void setAnswers(Set<Answer> answers)
+	{
+		this.answers = answers;
 	}
 }

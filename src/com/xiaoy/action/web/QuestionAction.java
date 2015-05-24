@@ -20,6 +20,8 @@ public class QuestionAction extends BasicAction<Question>
 
 	private Integer pid;
 	
+	private Integer qid;
+	
 	@Resource
 	private QuestionService questionService;
 
@@ -57,6 +59,26 @@ public class QuestionAction extends BasicAction<Question>
 		return "designSurveyAction";
 	}
 
+	/**
+	 * 删除问题
+	 * @return
+	 */
+	public String deleteQuestion()
+	{
+		questionService.delecteEntity(questionService.getEntity(qid));
+		return "designSurveyAction";
+	}
+	
+	/**
+	 * 进入问题编辑页面
+	 * @return
+	 */
+	public String toEditQuestionPage()
+	{
+		this.model = questionService.getEntity(qid);
+		return model.getQuestionType() + "";
+	}
+	
 	/****************** getter and setter **********************/
 
 	public Integer getSid()
@@ -77,5 +99,15 @@ public class QuestionAction extends BasicAction<Question>
 	public void setPid(Integer pid)
 	{
 		this.pid = pid;
+	}
+
+	public Integer getQid()
+	{
+		return qid;
+	}
+
+	public void setQid(Integer qid)
+	{
+		this.qid = qid;
 	}
 }
