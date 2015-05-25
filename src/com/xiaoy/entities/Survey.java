@@ -19,6 +19,12 @@ public class Survey
 	private String exitText = "退出";
 	private String doneText = "完成";
 	private Date createTime = new Date();
+	
+	//调查状态是否关闭
+	private Boolean closed;
+	
+	//logo图片的路径
+	private String logoPhotoPath;
 
 	// 建立从survey到user的对一的关联关系
 	private User user;
@@ -114,5 +120,25 @@ public class Survey
 	public void setUser(User user)
 	{
 		this.user = user;
+	}
+
+	public Boolean getClosed()
+	{
+		return closed;
+	}
+
+	public void setClosed(Boolean closed)
+	{
+		this.closed = closed;
+	}
+
+	public String getLogoPhotoPath()
+	{
+		return logoPhotoPath;
+	}
+
+	public void setLogoPhotoPath(String logoPhotoPath)
+	{
+		this.logoPhotoPath = logoPhotoPath;
 	}
 }

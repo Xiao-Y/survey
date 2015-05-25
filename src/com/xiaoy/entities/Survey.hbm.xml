@@ -26,6 +26,12 @@
 		<property name="createTime" type="timestamp">
 			<column name="CREATE_TIME" />
 		</property>
+		<property name="closed" type="java.lang.Boolean" update="false">
+			<column name="CLOSED" />
+		</property>
+		<property name="logoPhotoPath" type="java.lang.String" length="200">
+			<column name="LOGO_PHOTO_PATH" />
+		</property>
 
 		<!-- 建立从survey到user的对一的关联关系 -->
 		<many-to-one name="user" class="User" column="USER_ID" />

@@ -1,9 +1,11 @@
 package com.xiaoy.action.web;
 
+import java.io.File;
 import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.apache.struts2.ServletActionContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
@@ -12,6 +14,7 @@ import com.xiaoy.entities.Survey;
 import com.xiaoy.entities.User;
 import com.xiaoy.service.SurveyService;
 import com.xiaoy.struts2.UserAware;
+import com.xiaoy.util.ValiDateUtil;
 
 @Controller
 @Scope("prototype")
@@ -37,6 +40,10 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 
 	// Survey的主键
 	private Integer sid;
+
+	// 上传文件
+	private File logoPhoto;
+	private String logoPhotoFileName;
 
 	/**
 	 * 查询我的调查列表
@@ -114,6 +121,85 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 		return "mySurveysListPageAction";
 	}
 
+	/**
+	 * 清除答案
+	 * 
+	 * @return
+	 */
+	public String clearAnswer()
+	{
+		surveyService.clearAnswer(sid);
+		return "mySurveysListPageAction";
+	}
+
+	/**
+	 * 切换调查打开状态
+	 * 
+	 * @return
+	 */
+	public String toggleStatus()
+	{
+		surveyService.toggleStatus(sid);
+		return "mySurveysListPageAction";
+	}
+
+	/**
+	 * 到达添加logo页面
+	 * 
+	 * @return
+	 */
+	public String toAddLogoPage()
+	{
+		return "addLogoPage";
+	}
+
+	/**
+	 * 实现logo上传
+	 * 
+	 */
+	public String doAddLogo()
+	{
+		if (!ValiDateUtil.isValid(this.logoPhotoFileName))
+		{
+			// 1、文件上传
+
+			// ① upload文件夹的真实路径
+			String dir = ServletActionContext.getServletContext().getRealPath("/upload");
+			// ②文件扩展名 .jpg .png等
+			String ext = this.logoPhotoFileName.substring(this.logoPhotoFileName.lastIndexOf("."));
+			// ③文件重新命名
+			Long l = System.nanoTime();
+			String newFileName = l + ext;
+			// ④文件另存为
+			File newFile = new File(dir, newFileName);
+			logoPhoto.renameTo(newFile);
+
+			// 2、更新文件路径
+			surveyService.updateLogoPhoto(sid, "/upload/" + newFileName);
+			System.out.println("dir-->" + dir);
+			System.out.println("ext-->" + ext);
+			System.out.println("newFileName-->" + newFileName);
+		}
+		
+		return "designSurveyAction";
+	}
+	
+	/**
+	 * 图片是否存在
+	 * @return
+	 */
+	public Boolean photoExists()
+	{
+		String path = model.getLogoPhotoPath();
+		if(!ValiDateUtil.isValid(path))
+		{
+			String dir = ServletActionContext.getServletContext().getRealPath(path);
+			File file = new File(dir);
+			return file.exists();
+		}
+		return false;
+	}
+
 	/************************ getter and setter ***************************/
 
 	public void setMySurveyList(List<Survey> mySurveyList)
@@ -134,5 +220,25 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 	public void setSid(Integer sid)
 	{
 		this.sid = sid;
+	}
+
+	public File getLogoPhoto()
+	{
+		return logoPhoto;
+	}
+
+	public void setLogoPhoto(File logoPhoto)
+	{
+		this.logoPhoto = logoPhoto;
+	}
+
+	public String getLogoPhotoFileName()
+	{
+		return logoPhotoFileName;
+	}
+
+	public void setLogoPhotoFileName(String logoPhotoFileName)
+	{
+		this.logoPhotoFileName = logoPhotoFileName;
 	}
 }

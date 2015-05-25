@@ -24,4 +24,25 @@ public interface SurveyService extends BasicService<Survey>
 	 * @return
 	 */
 	Survey newSurvey(User user);
+
+	/**
+	 * 根据调查的id，清除答案
+	 * 
+	 * @param sid
+	 */
+	void clearAnswer(Integer sid);
+
+	/**
+	 * 根据调查的id，切换调查的状态
+	 * 
+	 * @param sid
+	 */
+	void toggleStatus(Integer sid);
+
+	/**
+	 * 更新Logo图片的路径
+	 * @param sid
+	 * @param string
+	 */
+	void updateLogoPhoto(Integer sid, String string);
 }

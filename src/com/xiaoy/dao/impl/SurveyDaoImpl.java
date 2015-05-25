@@ -26,4 +26,13 @@ public class SurveyDaoImpl extends BasicDaoImpl<Survey> implements SurveyDao
 		List<Survey> list = this.findEntityByHQL(hql, param);
 		return list;
 	}
+
+	@Override
+	public void toggleStatus(Integer sid)
+	{
+		Survey s = this.getEntity(sid);
+		//在Survey的closed字段中添加了upate=false,作用就是当使用hibernate中的update时不更新，但是使用HQL语句会更新
+		String hql = "update Survey s set s.closed = ? where s.id = ?";
+		this.batchEntityByHQL(hql, !s.getClosed(), sid);
+	}
 }
