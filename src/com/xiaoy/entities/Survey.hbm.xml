@@ -36,7 +36,7 @@
 		<!-- 建立从survey到user的对一的关联关系 -->
 		<many-to-one name="user" class="User" column="USER_ID" />
 		
-		<set name="pages" inverse="true" lazy="true" order-by="id" cascade="delete">
+		<set name="pages" inverse="true" lazy="true" order-by="orderno" cascade="delete">
 			<key>
 				<column name="SURVEY_ID" />
 			</key>

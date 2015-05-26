@@ -20,6 +20,8 @@ public class LoginAction extends BasicAction<User>
 	@Resource
 	private UserService userService;
 
+	private String inputPage;
+
 	public String toLoginPage()
 	{
 		return "loginPage";
@@ -28,6 +30,11 @@ public class LoginAction extends BasicAction<User>
 	public String doLogin()
 	{
 		return "success";
+	}
+
+	public void prepareDoLogin()
+	{
+		this.inputPage = "/index.jsp";
 	}
 
 	/**
@@ -40,10 +47,21 @@ public class LoginAction extends BasicAction<User>
 		if (user == null)
 		{
 			addActionError("用户名或密码错误");
-			sessionMap.put("user",null);
+			sessionMap.put("user", null);
 		} else
 		{
 			sessionMap.put("user", user);
 		}
+	}
+
+	/*************** getter and setter ******************************/
+	public String getInputPage()
+	{
+		return inputPage;
+	}
+
+	public void setInputPage(String inputPage)
+	{
+		this.inputPage = inputPage;
 	}
 }

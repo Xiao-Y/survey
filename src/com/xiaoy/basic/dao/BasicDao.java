@@ -97,4 +97,12 @@ public interface BasicDao<T>
 	 * @return List&ltT&gt
 	 */
 	public List<T> findEntityByHQL(String hql, Object... param);
+
+	/**
+	 * 单值检索,确保查询结果有且只有一条记录
+	 * @param hql
+	 * @param objects
+	 * @return
+	 */
+	public Object uniqueResult(String hql, Object... objects);
 }

@@ -45,4 +45,12 @@ public interface SurveyService extends BasicService<Survey>
 	 * @param string
 	 */
 	void updateLogoPhoto(Integer sid, String string);
+
+	/**
+	 * 进行页面移动/复制
+	 * @param srcPid
+	 * @param targPid
+	 * @param pos
+	 */
+	void moveOrCopyPage(Integer srcPid, Integer targPid, int pos);
 }

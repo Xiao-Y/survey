@@ -1,5 +1,6 @@
 package com.xiaoy.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,8 +11,10 @@ import java.util.Set;
  * @author XiaoY
  * @date: 2015年5月16日 下午10:55:24
  */
-public class Survey
+public class Survey implements Serializable
 {
+	private static final long serialVersionUID = 1856661075088311592L;
+	
 	private Integer id;
 	private String title = "未命名";
 	private String preText = "上一步";

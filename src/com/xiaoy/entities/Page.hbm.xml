@@ -14,11 +14,16 @@
 		<property name="description" type="java.lang.String">
 			<column name="DESCRIPTION" />
 		</property>
+		<property name="orderno" type="float">
+			<!-- 显示指定数据库中字段类型 -->
+			<column name="ORDER_NO" sql-type="decimal(10,5)" />
+		</property>
 
 		<many-to-one name="survey" class="Survey" column="SURVEY_ID"
 			fetch="join" />
 
-		<set name="questions" inverse="true" lazy="true" order-by="id" cascade="delete">
+		<set name="questions" inverse="true" lazy="true" order-by="id"
+			cascade="delete">
 			<key>
 				<column name="PAGE_ID" />
 			</key>

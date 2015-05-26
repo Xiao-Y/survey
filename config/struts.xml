@@ -29,6 +29,12 @@
 				<interceptor-ref name="defaultStack">
 					<!-- 修改ModelDrivenInterceptor中的refreshModelBeforeResult为true，表示刷新模型 -->
 					<param name="modelDriven.refreshModelBeforeResult">true</param>
+					<!-- 设定上传文件的大小为100kb -->
+					<param name="fileUpload.maximumSize">102400</param>
+					<!-- 设定上传文件的扩展名 -->
+					<param name="fileUpload.allowedExtensions">.jpg,.png,.jpeg,.gif,.bmp</param>
+					<!-- 设定上传文件的内容类型 -->
+					<param name="fileUpload.allowedTypes">image/jpg,image/png,image/jpeg,image/pjpeg,image/gif,image/bmp</param>
 				</interceptor-ref>
 			</interceptor-stack>
 		</interceptors>
@@ -45,34 +51,30 @@
 				<param name="actionName">SurveyAction_designSurvey</param>
 				<param name="sid">${sid}</param>
 			</result>
+
+			<!-- 用于显示错误信息 -->
+			<result name="input">${inputPage}</result>
 		</global-results>
 
 		<!-- 注册 -->
 		<action name="RegAction_*" class="regAction" method="{1}">
-			<!-- 用于显示错误信息 -->
-			<result name="input">/reg.jsp</result>
 			<result name="regPage">/reg.jsp</result>
 			<result name="success">/index.jsp</result>
 		</action>
 
 		<!-- 登陆 -->
 		<action name="LoginAction_*" class="loginAction" method="{1}">
-			<!-- 用于显示错误信息 -->
-			<result name="input">/index.jsp</result>
 			<result name="loginPage">/index.jsp</result>
 			<result name="success">/index.jsp</result>
 		</action>
 
 		<!-- 调查操作 -->
 		<action name="SurveyAction_*" class="surveyAction" method="{1}">
-			<!-- 用于显示错误信息 -->
-			<result name="input">/index.jsp</result>
-
 			<result name="mySurveysListPage">/mySurveyList.jsp</result>
 			<result name="designSurvey">/designSurvey.jsp</result>
 			<result name="editSurveyPage">/editSurvey.jsp</result>
 			<result name="addLogoPage">/addLogo.jsp</result>
-			
+
 			<result name="mySurveysListPageAction" type="redirectAction">
 				<param name="namespace">/</param>
 				<param name="actionName">SurveyAction_mySurveysListPage</param>
@@ -100,6 +102,12 @@
 			<result name="6">/matrixNormalQuestionDesign.jsp</result>
 			<result name="7">/matrixNormalQuestionDesign.jsp</result>
 			<result name="8">/matrixSelectQuestionDesign.jsp</result>
+		</action>
+		
+		<!-- 移动或复制页面 -->
+		<action name="MoveOrCopyPageAction_*" class="moveOrCopyPageAction"
+			method="{1}">
+			<result name="moveOrCopyPageListPage">/moveOrCopyPageList.jsp</result>
 		</action>
 	</package>
 </struts>    

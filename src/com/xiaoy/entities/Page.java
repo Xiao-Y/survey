@@ -1,5 +1,6 @@
 package com.xiaoy.entities;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,14 +10,19 @@ import java.util.Set;
  * @author XiaoY
  * @date: 2015年5月16日 下午11:14:36
  */
-public class Page
+public class Page implements Serializable
 {
+	private static final long serialVersionUID = -6296858245607091451L;
+	
 	private Integer id;
 	private String title = "未命名";
 	private String description;
+	
+	//页序
+	private float orderno;
 
 	// 简历从Page到Survey之间多对一关联关系
-	private Survey survey;
+	private transient Survey survey;
 
 	// 简历从Page到Question之间一对多关联关系
 	private Set<Question> questions = new HashSet<>();
@@ -29,6 +35,10 @@ public class Page
 	public void setId(Integer id)
 	{
 		this.id = id;
+		if(id != null)
+		{
+			this.orderno = id;
+		}
 	}
 
 	public String getTitle()
@@ -69,5 +79,15 @@ public class Page
 	public void setQuestions(Set<Question> questions)
 	{
 		this.questions = questions;
+	}
+
+	public float getOrderno()
+	{
+		return orderno;
+	}
+
+	public void setOrderno(float orderno)
+	{
+		this.orderno = orderno;
 	}
 }

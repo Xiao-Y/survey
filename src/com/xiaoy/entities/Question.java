@@ -1,5 +1,6 @@
 package com.xiaoy.entities;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,13 +12,15 @@ import com.xiaoy.util.StringUtil;
  * @author XiaoY
  * @date: 2015年5月16日 下午11:13:57
  */
-public class Question
+public class Question implements Serializable
 {
+	private static final long serialVersionUID = 1420745188874595611L;
+
 	/**
 	 * 回车换行
 	 */
 	private static final String RN = "\r\n";
-	
+
 	private Integer id;
 	// 题型0-8
 	private int questionType;
@@ -51,7 +54,7 @@ public class Question
 
 	// 建立从Question到Page之间多对一关联关系
 	private Page page;
-	
+
 	private Set<Answer> answers = new HashSet<>();
 
 	public Integer getId()
@@ -91,6 +94,7 @@ public class Question
 
 	/**
 	 * 重写该方法，完成字符串的拆分
+	 * 
 	 * @param options
 	 */
 	public void setOptions(String options)

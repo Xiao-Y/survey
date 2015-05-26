@@ -161,4 +161,15 @@ public class BasicDaoImpl<T> implements BasicDao<T>
 		}
 		return null;
 	}
+
+	@Override
+	public Object uniqueResult(String hql, Object... objects)
+	{
+		Query q = this.getSession().createQuery(hql);
+		for (int i = 0; i < objects.length; i++)
+		{
+			q.setParameter(i, objects[i]);
+		}
+		return q.uniqueResult();
+	}
 }

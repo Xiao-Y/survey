@@ -44,6 +44,9 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 	// 上传文件
 	private File logoPhoto;
 	private String logoPhotoFileName;
+	
+	//动态指定错误页面
+	private String inputPage;
 
 	/**
 	 * 查询我的调查列表
@@ -108,6 +111,14 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 		model.setUser(this.user);
 		surveyService.updateEntity(model);
 		return "designSurveyAction";
+	}
+	
+	/**
+	 * 预处理：当出现错误时，返回的是input，Strus.xml中使用OGNL找到inputPage
+	 */
+	public void prepareUpdateSurvey()
+	{
+		this.inputPage = "/editSurvey.jsp";
 	}
 
 	/**
@@ -176,12 +187,13 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 
 			// 2、更新文件路径
 			surveyService.updateLogoPhoto(sid, "/upload/" + newFileName);
-			System.out.println("dir-->" + dir);
-			System.out.println("ext-->" + ext);
-			System.out.println("newFileName-->" + newFileName);
 		}
-		
 		return "designSurveyAction";
+	}
+	
+	public void prepareDoAddLogo()
+	{
+		this.inputPage = "/addLogo.jsp";
 	}
 	
 	/**
@@ -240,5 +252,15 @@ public class SurveyAction extends BasicAction<Survey> implements UserAware
 	public void setLogoPhotoFileName(String logoPhotoFileName)
 	{
 		this.logoPhotoFileName = logoPhotoFileName;
+	}
+
+	public String getInputPage()
+	{
+		return inputPage;
+	}
+
+	public void setInputPage(String inputPage)
+	{
+		this.inputPage = inputPage;
 	}
 }

@@ -25,6 +25,8 @@ public class RegAction extends BasicAction<User>
 
 	@Resource
 	private UserService userService;
+	
+	private String inputPage;
 
 	/**
 	 * 到达注册页面 这个@SkipValidation注解是不校验的意思
@@ -51,6 +53,11 @@ public class RegAction extends BasicAction<User>
 
 		userService.saveEntity(user);
 		return SUCCESS;
+	}
+	
+	public void prepareDoReg()
+	{
+		this.inputPage = "/reg.jsp";
 	}
 
 	/**
@@ -100,5 +107,15 @@ public class RegAction extends BasicAction<User>
 	public void setConfirmPassword(String confirmPassword)
 	{
 		this.confirmPassword = confirmPassword;
+	}
+
+	public String getInputPage()
+	{
+		return inputPage;
+	}
+
+	public void setInputPage(String inputPage)
+	{
+		this.inputPage = inputPage;
 	}
 }

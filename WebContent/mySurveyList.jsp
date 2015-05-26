@@ -44,7 +44,7 @@
 					<tr>
 						<td><s:property value="id" /></td>
 						<td><s:property value="title" /></td>
-						<td><s:date name="createTime" format="yyyy-hh-dd HH:mm" /></td>
+						<td><s:date name="createTime" format="yyyy-MM-dd HH:mm" /></td>
 						<td>
 							<s:if test="closed">关闭</s:if>
 							<s:else>打开</s:else>

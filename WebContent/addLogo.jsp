@@ -21,10 +21,13 @@
 								<s:hidden name="sid" />
 								<table>
 									<tr>
+										<td colspan="2">提示：<font class="fonterror">文件扩展名为：.jpg,.png,.jpeg,.gif,.bmp&nbsp;&nbsp;&nbsp;文件大小：不能超过100KB</font></td>
+									</tr>
+									<tr>
 										<td class="tdFormLabel">选择Logo:</td>
 										<td class="tdFormControl">
-											<s:file name="logoPhoto" cssClass="text" />
-											<s:fielderror fieldName="logoPhoto"></s:fielderror>
+											<s:file name="logoPhoto" cssClass="text" />	
+											<font class="fonterror"><s:fielderror fieldName="logoPhoto"></s:fielderror></font>
 										</td>
 									</tr>
 									<tr>

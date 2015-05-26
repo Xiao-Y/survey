@@ -1,5 +1,10 @@
 package com.xiaoy.util;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -29,6 +34,33 @@ public class DataHelp
 			}
 			return buffer.toString();
 		} catch (NoSuchAlgorithmException e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	/**
+	 * 深度复制,复制的整个对象图
+	 */
+	public static Serializable deeplyCopy(Serializable src)
+	{
+		try
+		{
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(baos);
+			oos.writeObject(src);
+			oos.close();
+			baos.close();
+
+			byte[] bytes = baos.toByteArray();
+			ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
+			ObjectInputStream ois = new ObjectInputStream(bais);
+			Serializable copy = (Serializable) ois.readObject();
+			ois.close();
+			bais.close();
+			return copy;
+		} catch (Exception e)
 		{
 			e.printStackTrace();
 		}
