@@ -121,8 +121,8 @@
 
 五、hibernater懒加载问题
 解决方式：
-	1、修改hibernate的配置文件lazy为false。不建议使用，性能很差。
-	2、配置Spring的openSessionInViewFilter。可以起来一劳永逸的效果。不建议使用。性能不佳。
+	方法1、修改hibernate的配置文件lazy为false。不建议使用，性能很差。
+	方法2、配置Spring的openSessionInViewFilter。可以起来一劳永逸的效果。不建议使用。性能不佳。
 		在web.xml文件中配置：
 		<!-- 页面渲染时打开Session，该过滤器必须在Struts2之前 -->
 		<filter>
@@ -134,14 +134,14 @@
 			<filter-name>openSessionInViewFilter</filter-name>
 			<url-pattern>/*</url-pattern>
 		</filter-mapping>
-	3、强行在Service层中初始化：
+	方法3、强行在Service层中初始化：
 		在获取父类的同时，任意的遍历一次所有的子类。
 		
 六、模型赋值问题：
 解决方式：
-	1、手动压入栈中。耦合度高，不建议使用。
-	2、手动将新模型中的数据set到旧模型中。性能不高，建议使用。
-	3、使用paramsPrepareParamsStack + prepare的方式。
+	方法1、手动压入栈中。耦合度高，不建议使用。
+	方法2、手动将新模型中的数据set到旧模型中。性能不高，不建议使用。
+	方法3、使用paramsPrepareParamsStack + prepare的方式。
 	
 		1）在struts.xml文件中
 		
@@ -180,7 +180,7 @@
 			return "designSurvey";
 		}
 	
-	4、修改ModelDrivenInterceptor中的refreshModelBeforeResult为true
+	方法4、修改ModelDrivenInterceptor中的refreshModelBeforeResult为true
 		1）在struts.xml文件中
 		
 		<!-- 自定义拦截器栈 -->

@@ -14,7 +14,7 @@ import java.util.Set;
 public class Survey implements Serializable
 {
 	private static final long serialVersionUID = 1856661075088311592L;
-	
+
 	private Integer id;
 	private String title = "未命名";
 	private String preText = "上一步";
@@ -22,12 +22,17 @@ public class Survey implements Serializable
 	private String exitText = "退出";
 	private String doneText = "完成";
 	private Date createTime = new Date();
-	
-	//调查状态是否关闭
+
+	// 调查状态是否关闭. false表示打开、true表示关闭
 	private Boolean closed;
-	
-	//logo图片的路径
+
+	// logo图片的路径
 	private String logoPhotoPath;
+	
+	//最小页序
+	private float minOrderno;
+	//最大页序
+	private float maxOrderno;
 
 	// 建立从survey到user的对一的关联关系
 	private User user;
@@ -143,5 +148,25 @@ public class Survey implements Serializable
 	public void setLogoPhotoPath(String logoPhotoPath)
 	{
 		this.logoPhotoPath = logoPhotoPath;
+	}
+
+	public float getMinOrderno()
+	{
+		return minOrderno;
+	}
+
+	public void setMinOrderno(float minOrderno)
+	{
+		this.minOrderno = minOrderno;
+	}
+
+	public float getMaxOrderno()
+	{
+		return maxOrderno;
+	}
+
+	public void setMaxOrderno(float maxOrderno)
+	{
+		this.maxOrderno = maxOrderno;
 	}
 }

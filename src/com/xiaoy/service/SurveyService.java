@@ -41,6 +41,7 @@ public interface SurveyService extends BasicService<Survey>
 
 	/**
 	 * 更新Logo图片的路径
+	 * 
 	 * @param sid
 	 * @param string
 	 */
@@ -48,9 +49,17 @@ public interface SurveyService extends BasicService<Survey>
 
 	/**
 	 * 进行页面移动/复制
+	 * 
 	 * @param srcPid
 	 * @param targPid
 	 * @param pos
 	 */
 	void moveOrCopyPage(Integer srcPid, Integer targPid, int pos);
+
+	/**
+	 * 查询出所有的可用的调查
+	 * 
+	 * @return List&ltSurvey&gt
+	 */
+	List<Survey> findAllAvailableSurveys();
 }

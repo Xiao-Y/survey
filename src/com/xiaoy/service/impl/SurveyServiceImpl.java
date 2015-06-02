@@ -186,4 +186,11 @@ public class SurveyServiceImpl extends BasicServiceImpl<Survey> implements Surve
 		Long count = (Long) pageDao.isFirstPage(targPage);
 		return count == 0;
 	}
+
+	@Override
+	public List<Survey> findAllAvailableSurveys()
+	{
+		List<Survey> list = surveyDao.findAllAvailableSurveys();
+		return list;
+	}
 }

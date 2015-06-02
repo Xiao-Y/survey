@@ -15,7 +15,7 @@ public class LoginAction extends BasicAction<User>
 {
 	private static final long serialVersionUID = -8733425298891227372L;
 
-	private User model = super.getModel();
+	//private User model = super.getModel();
 
 	@Resource
 	private UserService userService;
@@ -43,7 +43,7 @@ public class LoginAction extends BasicAction<User>
 	 */
 	public void validateDoLogin()
 	{
-		User user = userService.validLogin(model);
+		User user = userService.validLogin(super.model);
 		if (user == null)
 		{
 			addActionError("用户名或密码错误");

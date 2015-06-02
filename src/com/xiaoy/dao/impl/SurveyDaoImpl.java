@@ -35,4 +35,11 @@ public class SurveyDaoImpl extends BasicDaoImpl<Survey> implements SurveyDao
 		String hql = "update Survey s set s.closed = ? where s.id = ?";
 		this.batchEntityByHQL(hql, !s.getClosed(), sid);
 	}
+
+	@Override
+	public List<Survey> findAllAvailableSurveys()
+	{
+		String hql = "from Survey s where s.closed = ?";
+		return this.findEntityByHQL(hql, false);
+	}
 }

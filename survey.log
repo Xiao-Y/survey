@@ -1198,3 +1198,162 @@ Pool thread stack traces:
 [main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Survey
 [main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.User
 [main] INFO : org.springframework.orm.hibernate4.HibernateTransactionManager#afterPropertiesSet : Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgf2ma99qwlvdb7no2mr|2c69757f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgf2ma99qwlvdb7no2mr|2c69757f, idleConnectionTestPeriod -> 60, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/survey?useUnicode=true&amp;characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[main] INFO : org.springframework.context.support.ClassPathXmlApplicationContext#prepareRefresh : Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5a0b65e0: startup date [Tue Jun 02 22:17:04 CST 2015]; root of context hierarchy
+[main] INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader#loadBeanDefinitions : Loading XML bean definitions from class path resource [spring-hibernate-c3p0.xml]
+[main] INFO : org.springframework.context.support.PropertySourcesPlaceholderConfigurer#loadProperties : Loading properties file from class path resource [spring-hibernate-c3p0.properties]
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Answer
+[main] INFO : com.mchange.v2.log.MLog#<clinit> : MLog clients using log4j logging.
+[main] INFO : com.mchange.v2.c3p0.C3P0Registry#banner : Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[main] INFO : org.hibernate.annotations.common.Version#<clinit> : HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[main] INFO : org.hibernate.Version#logVersion : HHH000412: Hibernate Core {4.2.4.Final}
+[main] INFO : org.hibernate.cfg.Environment#<clinit> : HHH000206: hibernate.properties not found
+[main] INFO : org.hibernate.cfg.Environment#buildBytecodeProvider : HHH000021: Bytecode provider name : javassist
+[main] INFO : org.hibernate.cfg.Configuration#configure : HHH000044: Configuring from URL: file:/D:/project/workspace/survey/WebContent/WEB-INF/classes/hibernate.cfg.xml
+[main] INFO : org.hibernate.cfg.Configuration#doConfigure : HHH000041: Configured SessionFactory: null
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] INFO : com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource#getPoolManager : Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgf2mf991e4ah491ndra25|36d26755, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgf2mf991e4ah491ndra25|36d26755, idleConnectionTestPeriod -> 60, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/survey?useUnicode=true&amp;characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[main] INFO : org.hibernate.dialect.Dialect#<init> : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[main] INFO : org.hibernate.engine.jdbc.internal.LobCreatorBuilder#useContextualLobCreation : HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+[main] INFO : org.hibernate.engine.transaction.internal.TransactionFactoryInitiator#initiateService : HHH000399: Using default transaction strategy (direct JDBC transactions)
+[main] INFO : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory#<init> : HHH000397: Using ASTQueryTranslatorFactory
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000228: Running hbm2ddl schema update
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000102: Fetching database metadata
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000396: Updating schema
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_answer
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, answer_ids, answer_time, uuid, other_answer, question_id, survey_id]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_1t8un8bbge1tbeqbc9gb5nonf, fk_shja0xwro9tt29wgafipqkufb]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [fk_1t8un8bbge1tbeqbc9gb5nonf, primary, fk_shja0xwro9tt29wgafipqkufb]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_page
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, title, description, survey_id, order_no]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_cs4mxptyxwfp1xm3vqkd31017]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [fk_cs4mxptyxwfp1xm3vqkd31017, primary]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_question
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, title, other, question_type, matrix_col_titles, page_id, other_select_options, other_style, matrix_select_options, matrix_row_titles, options]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_8xspd3rgnqgowuke36lenebub]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [primary, fk_8xspd3rgnqgowuke36lenebub]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_survey
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, done_text, title, next_text, exit_text, create_time, closed, user_id, logo_photo_path, pre_text]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_m67m08ntajc6rsf7p63xlowbg]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [primary, fk_m67m08ntajc6rsf7p63xlowbg]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_user
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [nick_name, id, email, name, reg_date, password]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: []
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [primary]
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000232: Schema update complete
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Page
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Question
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Survey
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.User
+[main] INFO : org.springframework.orm.hibernate4.HibernateTransactionManager#afterPropertiesSet : Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgf2mf991e4ah491ndra25|36d26755, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgf2mf991e4ah491ndra25|36d26755, idleConnectionTestPeriod -> 60, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/survey?useUnicode=true&amp;characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[main] WARN : org.hibernate.engine.jdbc.spi.SqlExceptionHelper#logExceptions : SQL Error: 1146, SQLState: 42S02
+[main] ERROR: org.hibernate.engine.jdbc.spi.SqlExceptionHelper#logExceptions : Table 'survey.pages' doesn't exist
+[main] INFO : org.hibernate.event.internal.DefaultLoadEventListener#onLoad : HHH000327: Error performing load command : org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[main] INFO : org.springframework.context.support.ClassPathXmlApplicationContext#prepareRefresh : Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2eb89c06: startup date [Tue Jun 02 22:17:43 CST 2015]; root of context hierarchy
+[main] INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader#loadBeanDefinitions : Loading XML bean definitions from class path resource [spring-hibernate-c3p0.xml]
+[main] INFO : org.springframework.context.support.PropertySourcesPlaceholderConfigurer#loadProperties : Loading properties file from class path resource [spring-hibernate-c3p0.properties]
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Answer
+[main] INFO : com.mchange.v2.log.MLog#<clinit> : MLog clients using log4j logging.
+[main] INFO : com.mchange.v2.c3p0.C3P0Registry#banner : Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[main] INFO : org.hibernate.annotations.common.Version#<clinit> : HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[main] INFO : org.hibernate.Version#logVersion : HHH000412: Hibernate Core {4.2.4.Final}
+[main] INFO : org.hibernate.cfg.Environment#<clinit> : HHH000206: hibernate.properties not found
+[main] INFO : org.hibernate.cfg.Environment#buildBytecodeProvider : HHH000021: Bytecode provider name : javassist
+[main] INFO : org.hibernate.cfg.Configuration#configure : HHH000044: Configuring from URL: file:/D:/project/workspace/survey/WebContent/WEB-INF/classes/hibernate.cfg.xml
+[main] INFO : org.hibernate.cfg.Configuration#doConfigure : HHH000041: Configured SessionFactory: null
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] INFO : com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource#getPoolManager : Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgf2mf991e4bbnaj3ondl|2f7e1991, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgf2mf991e4bbnaj3ondl|2f7e1991, idleConnectionTestPeriod -> 60, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/survey?useUnicode=true&amp;characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[main] INFO : org.hibernate.dialect.Dialect#<init> : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[main] INFO : org.hibernate.engine.jdbc.internal.LobCreatorBuilder#useContextualLobCreation : HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+[main] INFO : org.hibernate.engine.transaction.internal.TransactionFactoryInitiator#initiateService : HHH000399: Using default transaction strategy (direct JDBC transactions)
+[main] INFO : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory#<init> : HHH000397: Using ASTQueryTranslatorFactory
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000228: Running hbm2ddl schema update
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000102: Fetching database metadata
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000396: Updating schema
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_answer
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, answer_ids, answer_time, uuid, other_answer, question_id, survey_id]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_1t8un8bbge1tbeqbc9gb5nonf, fk_shja0xwro9tt29wgafipqkufb]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [fk_1t8un8bbge1tbeqbc9gb5nonf, primary, fk_shja0xwro9tt29wgafipqkufb]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_page
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, title, description, survey_id, order_no]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_cs4mxptyxwfp1xm3vqkd31017]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [fk_cs4mxptyxwfp1xm3vqkd31017, primary]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_question
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, title, other, question_type, matrix_col_titles, page_id, other_select_options, other_style, matrix_select_options, matrix_row_titles, options]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_8xspd3rgnqgowuke36lenebub]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [primary, fk_8xspd3rgnqgowuke36lenebub]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_survey
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, done_text, title, next_text, exit_text, create_time, closed, user_id, logo_photo_path, pre_text]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_m67m08ntajc6rsf7p63xlowbg]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [primary, fk_m67m08ntajc6rsf7p63xlowbg]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_user
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [nick_name, id, email, name, reg_date, password]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: []
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [primary]
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000232: Schema update complete
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Page
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Question
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Survey
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.User
+[main] INFO : org.springframework.orm.hibernate4.HibernateTransactionManager#afterPropertiesSet : Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgf2mf991e4bbnaj3ondl|2f7e1991, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgf2mf991e4bbnaj3ondl|2f7e1991, idleConnectionTestPeriod -> 60, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/survey?useUnicode=true&amp;characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[main] WARN : org.hibernate.engine.jdbc.spi.SqlExceptionHelper#logExceptions : SQL Error: 1146, SQLState: 42S02
+[main] ERROR: org.hibernate.engine.jdbc.spi.SqlExceptionHelper#logExceptions : Table 'survey.pages' doesn't exist
+[main] INFO : org.hibernate.event.internal.DefaultLoadEventListener#onLoad : HHH000327: Error performing load command : org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+[main] INFO : org.springframework.context.support.ClassPathXmlApplicationContext#prepareRefresh : Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5a0b65e0: startup date [Tue Jun 02 22:18:58 CST 2015]; root of context hierarchy
+[main] INFO : org.springframework.beans.factory.xml.XmlBeanDefinitionReader#loadBeanDefinitions : Loading XML bean definitions from class path resource [spring-hibernate-c3p0.xml]
+[main] INFO : org.springframework.context.support.PropertySourcesPlaceholderConfigurer#loadProperties : Loading properties file from class path resource [spring-hibernate-c3p0.properties]
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Answer
+[main] INFO : com.mchange.v2.log.MLog#<clinit> : MLog clients using log4j logging.
+[main] INFO : com.mchange.v2.c3p0.C3P0Registry#banner : Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+[main] INFO : org.hibernate.annotations.common.Version#<clinit> : HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+[main] INFO : org.hibernate.Version#logVersion : HHH000412: Hibernate Core {4.2.4.Final}
+[main] INFO : org.hibernate.cfg.Environment#<clinit> : HHH000206: hibernate.properties not found
+[main] INFO : org.hibernate.cfg.Environment#buildBytecodeProvider : HHH000021: Bytecode provider name : javassist
+[main] INFO : org.hibernate.cfg.Configuration#configure : HHH000044: Configuring from URL: file:/D:/project/workspace/survey/WebContent/WEB-INF/classes/hibernate.cfg.xml
+[main] INFO : org.hibernate.cfg.Configuration#doConfigure : HHH000041: Configured SessionFactory: null
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] WARN : org.hibernate.internal.util.xml.DTDEntityResolver#resolveEntity : HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+[main] INFO : com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource#getPoolManager : Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgf2mf991e4cxmf1gajhh3|dd37992, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgf2mf991e4cxmf1gajhh3|dd37992, idleConnectionTestPeriod -> 60, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/survey?useUnicode=true&amp;characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+[main] INFO : org.hibernate.dialect.Dialect#<init> : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+[main] INFO : org.hibernate.engine.jdbc.internal.LobCreatorBuilder#useContextualLobCreation : HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+[main] INFO : org.hibernate.engine.transaction.internal.TransactionFactoryInitiator#initiateService : HHH000399: Using default transaction strategy (direct JDBC transactions)
+[main] INFO : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory#<init> : HHH000397: Using ASTQueryTranslatorFactory
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000228: Running hbm2ddl schema update
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000102: Fetching database metadata
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000396: Updating schema
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_answer
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, answer_ids, answer_time, uuid, other_answer, question_id, survey_id]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_1t8un8bbge1tbeqbc9gb5nonf, fk_shja0xwro9tt29wgafipqkufb]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [fk_1t8un8bbge1tbeqbc9gb5nonf, primary, fk_shja0xwro9tt29wgafipqkufb]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_page
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, title, description, survey_id, order_no]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_cs4mxptyxwfp1xm3vqkd31017]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [fk_cs4mxptyxwfp1xm3vqkd31017, primary]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_question
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, title, other, question_type, matrix_col_titles, page_id, other_select_options, other_style, matrix_select_options, matrix_row_titles, options]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_8xspd3rgnqgowuke36lenebub]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [primary, fk_8xspd3rgnqgowuke36lenebub]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_survey
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [id, done_text, title, next_text, exit_text, create_time, closed, user_id, logo_photo_path, pre_text]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: [fk_m67m08ntajc6rsf7p63xlowbg]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [primary, fk_m67m08ntajc6rsf7p63xlowbg]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000261: Table found: survey.t_user
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000037: Columns: [nick_name, id, email, name, reg_date, password]
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000108: Foreign keys: []
+[main] INFO : org.hibernate.tool.hbm2ddl.TableMetadata#<init> : HHH000126: Indexes: [primary]
+[main] INFO : org.hibernate.tool.hbm2ddl.SchemaUpdate#execute : HHH000232: Schema update complete
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Page
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Question
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.Survey
+[main] INFO : com.xiaoy.basic.dao.impl.BasicDaoImpl#<init> : 类型转换---> class com.xiaoy.entities.User
+[main] INFO : org.springframework.orm.hibernate4.HibernateTransactionManager#afterPropertiesSet : Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 5, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> true, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hgf2mf991e4cxmf1gajhh3|dd37992, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hgf2mf991e4cxmf1gajhh3|dd37992, idleConnectionTestPeriod -> 60, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://localhost:3306/survey?useUnicode=true&amp;characterEncoding=UTF-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 60, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 30, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]] of Hibernate SessionFactory for HibernateTransactionManager

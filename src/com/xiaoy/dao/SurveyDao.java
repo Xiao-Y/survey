@@ -22,4 +22,10 @@ public interface SurveyDao extends BasicDao<Survey>
 	 * @param sid
 	 */
 	void toggleStatus(Integer sid);
+
+	/**
+	 * 查询出所有的可用的调查
+	 * @return
+	 */
+	List<Survey> findAllAvailableSurveys();
 }

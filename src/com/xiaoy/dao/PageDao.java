@@ -36,4 +36,11 @@ public interface PageDao extends BasicDao<Page>
 	 */
 	Long isFirstPage(Page targPage);
 
+	/**
+	 * 查询调查的首页
+	 * @param sid
+	 * @return
+	 */
+	Page getFirstPage(Integer sid);
+
 }

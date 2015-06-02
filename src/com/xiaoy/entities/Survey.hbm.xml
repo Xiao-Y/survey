@@ -32,6 +32,10 @@
 		<property name="logoPhotoPath" type="java.lang.String" length="200">
 			<column name="LOGO_PHOTO_PATH" />
 		</property>
+		
+		<!-- 查询出页面的最小页序 ，formula中的是SQL语句-->
+		<property name="minOrderno" formula="(select min(p.order_no) from t_page p where p.survey_id = id)"/>
+		<property name="maxOrderno" formula="(select max(p.order_no) from t_page p where p.survey_id = id)"/>
 
 		<!-- 建立从survey到user的对一的关联关系 -->
 		<many-to-one name="user" class="User" column="USER_ID" />

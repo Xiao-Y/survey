@@ -42,4 +42,12 @@ public class PageDaoImpl extends BasicDaoImpl<Page> implements PageDao
 		Long count = (Long) this.uniqueResult(hql, targPage.getSurvey().getId(), targPage.getOrderno());
 		return count;
 	}
+
+	@Override
+	public Page getFirstPage(Integer sid)
+	{
+		String hql = "from Page p where p.survey.id = ? order by p.orderno asc";
+		List<Page> list = this.findEntityByHQL(hql, sid);
+		return list.get(0);
+	}
 }

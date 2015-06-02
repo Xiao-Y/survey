@@ -24,4 +24,10 @@ public class PageServiceImpl extends BasicServiceImpl<Page> implements PageServi
 		this.pageDao = (PageDao) basicDao;
 	}
 
+	@Override
+	public Page getFirstPage(Integer sid)
+	{
+		return pageDao.getFirstPage(sid);
+	}
+
 }
