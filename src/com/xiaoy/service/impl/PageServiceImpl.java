@@ -1,5 +1,7 @@
 package com.xiaoy.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -30,4 +32,19 @@ public class PageServiceImpl extends BasicServiceImpl<Page> implements PageServi
 		return pageDao.getFirstPage(sid);
 	}
 
+	@Override
+	public Page getPrePage(Integer currPid)
+	{
+		Page p = pageDao.getEntity(currPid);
+		List<Page> list = pageDao.getPrePage(p);
+		return list.get(0);
+	}
+
+	@Override
+	public Page getNextPaeg(Integer currPid)
+	{
+		Page p = pageDao.getEntity(currPid);
+		List<Page> list = pageDao.getNextPage(p);
+		return list.get(0);
+	}
 }

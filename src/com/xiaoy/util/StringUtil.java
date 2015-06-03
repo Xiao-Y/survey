@@ -26,4 +26,25 @@ public class StringUtil
 		}
 		return null;
 	}
+	
+	/**
+	 * 判断vaules数组中是否包含value字符串
+	 * @param values	
+	 * @param value
+	 * @return	包含：true，不包含false
+	 */
+	public static boolean isContains(String[] values, String value)
+	{
+		if(!ValiDateUtil.isValid(values))
+		{
+			for(String s : values)
+			{
+				if(s.equals(value))
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 }
