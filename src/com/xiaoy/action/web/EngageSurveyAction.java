@@ -173,6 +173,7 @@ public class EngageSurveyAction extends BasicAction<Survey> implements ServletCo
 
 	/**
 	 * 获取session中存放的所有参数
+	 * 
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
@@ -213,13 +214,13 @@ public class EngageSurveyAction extends BasicAction<Survey> implements ServletCo
 	{
 		Map<String, String[]> map = this.getAllParamsMap().get(currPage.getId());
 		String[] values = map.get(name);
-		if(StringUtil.isContains(values,value))
+		if (StringUtil.isContains(values, value))
 		{
 			return selTag;
 		}
 		return "";
 	}
-	
+
 	/**
 	 * 设置标记，用于答案的回显。主要用于：text
 	 * 
@@ -235,7 +236,7 @@ public class EngageSurveyAction extends BasicAction<Survey> implements ServletCo
 	{
 		Map<String, String[]> map = this.getAllParamsMap().get(currPage.getId());
 		String[] values = map.get(name);
-		return "value='"+ values[0] + "'";
+		return "value='" + values[0] + "'";
 	}
 
 	/************* getter and setter *************************/
